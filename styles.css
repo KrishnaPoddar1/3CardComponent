@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-brightOrange: hsl(31, 77%, 52%);
+    --primary-darkCyan: hsl(184, 100%, 22%);
+    --primary-veryDarkCyan: hsl(179, 100%, 13%);
+    --neutral-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --neutral-backgroundHeadingsButtons: hsl(0, 0%, 95%);
+
+    --fontsize: 15px;
+    --ff-headings: "Big Shoulders Display", sans-serif;
+    --fw-headings: 700;
+    --ff-para:"Lexend Deca", sans-serif;
+    --fw-para:400;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-para);
+    font-weight: var(--fw-para);
+    font-size: var(--fontsize);
+}
+
+h1{
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+body, button {
+    background-color: var(--neutral-backgroundHeadingsButtons);
+}
+
+h1{
+    color: var(--neutral-backgroundHeadingsButtons);
+}
+
+p{
+    color: var(--neutral-paragraphs);
+}
+
+#sedan {
+    background-color: var(--primary-brightOrange);
+}
+
+#suv {
+    background-color: var(--primary-darkCyan);
+}
+
+#luxury {
+    background-color: var(--primary-veryDarkCyan);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 20rem;
+    padding: 2rem;
+}
+
+.text-wrapper {
+    line-height: 1.7rem;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 50%;
+    border: 0;
+    margin-top: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    
+}
+
+#sedan button{
+    color: var(--primary-brightOrange);
+}
+
+#sedan button:hover {
+    background-color: var(--primary-brightOrange);
+    color: var(--neutral-backgroundHeadingsButtons);
+}
+
+#suv button {
+    color: var(--primary-darkCyan);
+}
+
+#suv button:hover {
+    background-color: var(--primary-darkCyan);
+    color: var(--neutral-backgroundHeadingsButtons);
+}
+
+#luxury button {
+    color: var(--primary-veryDarkCyan);
+}
+
+#luxury button:hover {
+    background-color: var(--primary-veryDarkCyan);
+    color: var(--neutral-backgroundHeadingsButtons);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    button {
+        margin-top: 6rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
